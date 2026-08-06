@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GrowWise — Your AI-powered gardening assistant. Grow vegetables, herbs, flowers, and more on your terrace, balcony, or indoors with personalized plant care guidance.">
+  <title>GrowWise — AI-Powered Gardening Assistant</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION — Sticky header with glassmorphism on scroll
+       ============================================ -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav__inner">
+
+        <a href="index.html" class="nav__logo" aria-label="GrowWise Home">
+          <span class="nav__logo-icon" aria-hidden="true">🌿</span>
+          GrowWise
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="#features" class="nav__link">Features</a></li>
+          <li><a href="encyclopedia.html" class="nav__link">Encyclopedia</a></li>
+          <li><a href="chatbot.html" class="nav__link">AI Chat</a></li>
+          <li><a href="#categories" class="nav__link">Categories</a></li>
+          <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="login.html" class="btn btn--ghost">Sign In</a>
+          <a href="chatbot.html" class="btn btn--primary">Get Started</a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+        <a href="#features" class="nav__mobile-link">Features</a>
+        <a href="encyclopedia.html" class="nav__mobile-link">Encyclopedia</a>
+        <a href="chatbot.html" class="nav__mobile-link">AI Chat</a>
+        <a href="#categories" class="nav__mobile-link">Categories</a>
+        <a href="#testimonials" class="nav__mobile-link">Reviews</a>
+        <a href="login.html" class="btn btn--secondary" style="margin-top: 1rem;">Sign In</a>
+        <a href="chatbot.html" class="btn btn--primary">Get Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================
+         HERO — Primary value proposition & AI mockup
+         ============================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg-shapes" aria-hidden="true">
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+        <div class="hero__shape hero__shape--3"></div>
+      </div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            AI-Powered Gardening Platform
+          </div>
+
+          <h1 id="hero-title" class="hero__title">
+            Grow Smarter with <span>AI Gardening</span> Intelligence
+          </h1>
+
+          <p class="hero__subtitle">
+            From terrace tomatoes to balcony herbs — GrowWise gives you personalized plant care, disease detection, and expert guidance to grow successfully at home.
+          </p>
+
+          <div class="hero__cta">
+            <a href="chatbot.html" class="btn btn--primary btn--lg">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              Ask AI Gardener
+            </a>
+            <a href="encyclopedia.html" class="btn btn--ghost btn--lg">
+              Explore Plants
+            </a>
+          </div>
+
+          <div class="hero__trust">
+            <div class="hero__trust-avatars" aria-hidden="true">
+              <div class="hero__trust-avatar">A</div>
+              <div class="hero__trust-avatar">R</div>
+              <div class="hero__trust-avatar">P</div>
+              <div class="hero__trust-avatar">S</div>
+            </div>
+            <p class="hero__trust-text">
+              Trusted by <strong>12,000+</strong> home gardeners across India
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero visual: AI chatbot mockup preview -->
+        <div class="hero__visual">
+          <div class="hero__mockup card--glass">
+            <div class="hero__mockup-header">
+              <span class="hero__mockup-dot"></span>
+              <span class="hero__mockup-dot"></span>
+              <span class="hero__mockup-dot"></span>
+              <span class="hero__mockup-title">GrowWise AI Assistant</span>
+            </div>
+
+            <div class="hero__chat">
+              <div class="hero__chat-msg hero__chat-msg--user">
+                My tomato leaves are turning yellow. What should I do?
+              </div>
+              <div class="hero__chat-typing" aria-label="AI is typing">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hero__chat-msg hero__chat-msg--ai" style="display: none;"></div>
+            </div>
+          </div>
+
+          <!-- Floating stat cards -->
+          <div class="hero__floating-card hero__floating-card--1" aria-hidden="true">
+            <div class="hero__floating-icon">🌱</div>
+            <div>
+              <div class="hero__floating-label">Plants Identified</div>
+              <div class="hero__floating-value">98% Accuracy</div>
+            </div>
+          </div>
+
+          <div class="hero__floating-card hero__floating-card--2" aria-hidden="true">
+            <div class="hero__floating-icon">💧</div>
+            <div>
+              <div class="hero__floating-label">Water Reminder</div>
+              <div class="hero__floating-value">Today, 6 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TRUST BAR — Social proof indicators
+         ============================================ -->
+    <section class="trust-bar" aria-label="Platform highlights">
+      <div class="container trust-bar__inner">
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🤖</span>
+          <span><strong>AI-Powered</strong> Plant Care</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🌿</span>
+          <span><strong>500+</strong> Plant Profiles</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">🌱</span>
+          <span><strong>100%</strong> Organic Methods</span>
+        </div>
+        <div class="trust-bar__item">
+          <span class="trust-bar__icon" aria-hidden="true">📱</span>
+          <span><strong>Free</strong> to Get Started</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES — Core platform capabilities
+         ============================================ -->
+    <section id="features" class="section section--cream" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Platform Features</span>
+          <h2 id="features-title" class="section__title">Everything You Need to Grow Successfully</h2>
+          <p class="section__subtitle">
+            Powerful AI tools and expert knowledge combined in one platform — designed for terrace, balcony, and indoor gardeners.
+          </p>
+        </header>
+
+        <div class="features__grid">
+          <article class="card feature-card animate-on-scroll" data-delay="1">
+            <div class="feature-card__icon" aria-hidden="true">🤖</div>
+            <h3 class="feature-card__title">AI Gardening Chatbot</h3>
+            <p class="feature-card__text">
+              Ask anything about plant care, fertilizers, pests, or seasonal crops. Get instant, personalized answers powered by AI.
+            </p>
+            <a href="chatbot.html" class="feature-card__link">Try AI Chat →</a>
+          </article>
+
+          <article class="card feature-card animate-on-scroll" data-delay="2">
+            <div class="feature-card__icon" aria-hidden="true">📸</div>
+            <h3 class="feature-card__title">Plant Identification</h3>
+            <p class="feature-card__text">
+              Upload a photo and instantly identify any plant with confidence scores and detailed care recommendations.
+            </p>
+            <a href="identify.html" class="feature-card__link">Identify Plants →</a>
+          </article>
+
+          <article class="card feature-card animate-on-scroll" data-delay="3">
+            <div class="feature-card__icon" aria-hidden="true">🔬</div>
+            <h3 class="feature-card__title">Disease Detection</h3>
+            <p class="feature-card__text">
+              Spot plant diseases early. Upload images of unhealthy leaves and get organic treatment recommendations.
+            </p>
+            <a href="identify.html" class="feature-card__link">Detect Diseases →</a>
+          </article>
+
+          <article class="card feature-card animate-on-scroll" data-delay="1">
+            <div class="feature-card__icon" aria-hidden="true">📚</div>
+            <h3 class="feature-card__title">Plant Encyclopedia</h3>
+            <p class="feature-card__text">
+              Browse 500+ plants with complete growing guides — sunlight, watering, soil, pests, and harvesting info.
+            </p>
+            <a href="encyclopedia.html" class="feature-card__link">Browse Encyclopedia →</a>
+          </article>
+
+          <article class="card feature-card animate-on-scroll" data-delay="2">
+            <div class="feature-card__icon" aria-hidden="true">📅</div>
+            <h3 class="feature-card__title">Seasonal Calendar</h3>
+            <p class="feature-card__text">
+              Know exactly what to plant each month. Interactive calendar with climate-based seasonal recommendations.
+            </p>
+            <a href="calendar.html" class="feature-card__link">View Calendar →</a>
+          </article>
+
+          <article class="card feature-card animate-on-scroll" data-delay="3">
+            <div class="feature-card__icon" aria-hidden="true">🎯</div>
+            <h3 class="feature-card__title">Smart Recommendations</h3>
+            <p class="feature-card__text">
+              Tell us your space, sunlight, and experience level — we'll recommend the perfect plants for your garden.
+            </p>
+            <a href="recommend.html" class="feature-card__link">Get Recommendations →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CATEGORIES — Gardening types covered
+         ============================================ -->
+    <section id="categories" class="section section--white" aria-labelledby="categories-title">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Garden Types</span>
+          <h2 id="categories-title" class="section__title">Grow Anywhere, Grow Anything</h2>
+          <p class="section__subtitle">
+            Whether you have a spacious terrace or a sunny windowsill, GrowWise has guides for every gardening style.
+          </p>
+        </header>
+
+        <div class="categories__grid">
+          <a href="encyclopedia.html" class="category-card category-card--vegetables animate-on-scroll" data-delay="1">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🥬</span>
+              <h3 class="category-card__title">Vegetables</h3>
+              <span class="category-card__count">120+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--fruits animate-on-scroll" data-delay="2">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🍅</span>
+              <h3 class="category-card__title">Fruits</h3>
+              <span class="category-card__count">85+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--herbs animate-on-scroll" data-delay="3">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🌿</span>
+              <h3 class="category-card__title">Herbs</h3>
+              <span class="category-card__count">60+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--flowers animate-on-scroll" data-delay="4">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🌸</span>
+              <h3 class="category-card__title">Flowers</h3>
+              <span class="category-card__count">95+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--medicinal animate-on-scroll" data-delay="1">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">💊</span>
+              <h3 class="category-card__title">Medicinal</h3>
+              <span class="category-card__count">45+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--indoor animate-on-scroll" data-delay="2">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🏠</span>
+              <h3 class="category-card__title">Indoor Plants</h3>
+              <span class="category-card__count">70+ varieties</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--terrace animate-on-scroll" data-delay="3">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🏡</span>
+              <h3 class="category-card__title">Terrace Garden</h3>
+              <span class="category-card__count">Full guides</span>
+            </div>
+          </a>
+
+          <a href="encyclopedia.html" class="category-card category-card--ornamental animate-on-scroll" data-delay="4">
+            <div class="category-card__bg"></div>
+            <div class="category-card__overlay">
+              <span class="category-card__icon" aria-hidden="true">🪴</span>
+              <h3 class="category-card__title">Ornamental</h3>
+              <span class="category-card__count">55+ varieties</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         HOW IT WORKS — 3-step onboarding flow
+         ============================================ -->
+    <section class="section section--cream" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">How It Works</span>
+          <h2 id="how-title" class="section__title">Start Growing in 3 Simple Steps</h2>
+          <p class="section__subtitle">
+            No gardening experience needed. GrowWise guides you from seed to harvest.
+          </p>
+        </header>
+
+        <div class="steps">
+          <div class="step animate-on-scroll" data-delay="1">
+            <div class="step__number">1</div>
+            <h3 class="step__title">Tell Us About Your Space</h3>
+            <p class="step__text">
+              Share your location, available space, sunlight exposure, and gardening experience level.
+            </p>
+          </div>
+
+          <div class="step animate-on-scroll" data-delay="2">
+            <div class="step__number">2</div>
+            <h3 class="step__title">Get AI Recommendations</h3>
+            <p class="step__text">
+              Receive personalized plant suggestions with complete growing instructions tailored to your conditions.
+            </p>
+          </div>
+
+          <div class="step animate-on-scroll" data-delay="3">
+            <div class="step__number">3</div>
+            <h3 class="step__title">Grow & Track Progress</h3>
+            <p class="step__text">
+              Follow care schedules, get watering reminders, and track your garden's growth in your dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         STATISTICS — Animated platform metrics
+         ============================================ -->
+    <section class="section section--dark" aria-label="Platform statistics">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">By the Numbers</span>
+          <h2 class="section__title">Growing Together</h2>
+          <p class="section__subtitle">
+            Join thousands of home gardeners who trust GrowWise for smarter, healthier plants.
+          </p>
+        </header>
+
+        <div class="stats">
+          <div class="stat-card animate-on-scroll" data-delay="1">
+            <div class="stat-card__number" data-count="12000" data-suffix="+">0</div>
+            <div class="stat-card__label">Active Gardeners</div>
+          </div>
+
+          <div class="stat-card animate-on-scroll" data-delay="2">
+            <div class="stat-card__number" data-count="500" data-suffix="+">0</div>
+            <div class="stat-card__label">Plant Profiles</div>
+          </div>
+
+          <div class="stat-card animate-on-scroll" data-delay="3">
+            <div class="stat-card__number" data-count="98" data-suffix="%">0</div>
+            <div class="stat-card__label">AI Accuracy Rate</div>
+          </div>
+
+          <div class="stat-card animate-on-scroll" data-delay="4">
+            <div class="stat-card__number" data-count="50" data-suffix="+">0</div>
+            <div class="stat-card__label">Organic Solutions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS — User social proof
+         ============================================ -->
+    <section id="testimonials" class="section section--white" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Testimonials</span>
+          <h2 id="testimonials-title" class="section__title">Loved by Home Gardeners</h2>
+          <p class="section__subtitle">
+            Real stories from terrace gardeners, balcony growers, and indoor plant enthusiasts.
+          </p>
+        </header>
+
+        <div class="testimonials__grid">
+          <article class="card testimonial-card animate-on-scroll" data-delay="1">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "GrowWise helped me turn my bare terrace into a thriving vegetable garden. The AI chatbot answered every question I had about my tomato plants!"
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">AP</div>
+              <div>
+                <div class="testimonial-card__name">Ananya Patel</div>
+                <div class="testimonial-card__role">Terrace Gardener, Mumbai</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="card testimonial-card animate-on-scroll" data-delay="2">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "The plant identification feature is incredible. I discovered 3 new herbs growing on my balcony and learned exactly how to care for them."
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">RK</div>
+              <div>
+                <div class="testimonial-card__name">Rahul Kumar</div>
+                <div class="testimonial-card__role">Balcony Gardener, Bangalore</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="card testimonial-card animate-on-scroll" data-delay="3">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "As a beginner, the care guides and watering reminders were a lifesaver. My indoor plants have never looked healthier. Highly recommend!"
+            </blockquote>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">SM</div>
+              <div>
+                <div class="testimonial-card__name">Sneha Menon</div>
+                <div class="testimonial-card__role">Indoor Plant Enthusiast, Chennai</div>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA — Final conversion section
+         ============================================ -->
+    <section class="section section--cream" aria-labelledby="cta-title">
+      <div class="container container--narrow">
+        <div class="cta animate-on-scroll">
+          <h2 id="cta-title" class="cta__title">Ready to Start Your Garden?</h2>
+          <p class="cta__text">
+            Join 12,000+ gardeners using AI to grow healthier plants. Free to start — no credit card required.
+          </p>
+          <div class="cta__buttons">
+            <a href="chatbot.html" class="btn btn--primary btn--lg">Start Growing Free</a>
+            <a href="encyclopedia.html" class="btn btn--secondary btn--lg">Browse Plant Encyclopedia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER — Site links, social, legal
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="nav__logo-icon" aria-hidden="true">🌿</span>
+            GrowWise
+          </div>
+          <p class="footer__desc">
+            Your AI-powered gardening companion. Grow vegetables, herbs, flowers, and more — successfully, organically, at home.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Platform</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="encyclopedia.html" class="footer__link">Plant Encyclopedia</a></li>
+            <li><a href="chatbot.html" class="footer__link">AI Chatbot</a></li>
+            <li><a href="dashboard.html" class="footer__link">Dashboard</a></li>
+            <li><a href="encyclopedia.html" class="footer__link">Care Guides</a></li>
+            <li><a href="calendar.html" class="footer__link">Seasonal Calendar</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Resources</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="fertilizers.html" class="footer__link">Fertilizer Library</a></li>
+            <li><a href="pests.html" class="footer__link">Pest Management</a></li>
+            <li><a href="identify.html" class="footer__link">Disease Detection</a></li>
+            <li><a href="identify.html" class="footer__link">Plant Identification</a></li>
+            <li><a href="recommend.html" class="footer__link">Recommendations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Company</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 GrowWise. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

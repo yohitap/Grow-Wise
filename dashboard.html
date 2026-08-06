@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your GrowWise personal garden dashboard — track plants, watering reminders, favorites, and garden health.">
+  <title>Dashboard — GrowWise</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav is-scrolled" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon" aria-hidden="true">🌿</span> GrowWise</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="encyclopedia.html" class="nav__link">Encyclopedia</a></li>
+          <li><a href="calendar.html" class="nav__link">Calendar</a></li>
+          <li><a href="identify.html" class="nav__link">Identify</a></li>
+          <li><a href="chatbot.html" class="nav__link">AI Chat</a></li>
+          <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="login.html" class="btn btn--ghost">Sign In</a>
+          <a href="chatbot.html" class="btn btn--primary">Ask AI</a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+        <a href="index.html" class="nav__mobile-link">Home</a>
+        <a href="encyclopedia.html" class="nav__mobile-link">Encyclopedia</a>
+        <a href="calendar.html" class="nav__mobile-link">Calendar</a>
+        <a href="identify.html" class="nav__mobile-link">Identify</a>
+        <a href="chatbot.html" class="nav__mobile-link">AI Chat</a>
+        <a href="dashboard.html" class="btn btn--secondary" style="margin-top: 1rem;">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="dash-page">
+    <section class="dash-hero">
+      <div class="page-hero__shape page-hero__shape--1" aria-hidden="true"></div>
+      <div class="page-hero__shape page-hero__shape--2" aria-hidden="true"></div>
+      <div class="container dash-hero__inner">
+        <div>
+          <div class="dash-hero__greeting" id="dash-greeting"></div>
+          <h1 class="dash-hero__title">Welcome to your Garden</h1>
+          <p class="dash-hero__text" id="dash-summary"></p>
+        </div>
+        <div class="dash-hero__actions">
+          <div class="dash-hero__icon" aria-hidden="true">🌿</div>
+          <button class="btn btn--ghost" id="sign-out" type="button">Sign Out</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container dash-content">
+      <div class="dash-stats">
+        <div class="dash-stat">
+          <div class="dash-stat__icon" aria-hidden="true">🌱</div>
+          <div><div class="dash-stat__value" id="stat-plants">0</div><div class="dash-stat__label">Plants Tracking</div></div>
+        </div>
+        <div class="dash-stat">
+          <div class="dash-stat__icon" aria-hidden="true">⭐</div>
+          <div><div class="dash-stat__value" id="stat-favorites">0</div><div class="dash-stat__label">Favorites</div></div>
+        </div>
+        <div class="dash-stat">
+          <div class="dash-stat__icon" aria-hidden="true">💧</div>
+          <div><div class="dash-stat__value" id="stat-reminders">0</div><div class="dash-stat__label">Care Today</div></div>
+        </div>
+        <div class="dash-stat">
+          <div class="dash-stat__icon" aria-hidden="true">❤️</div>
+          <div><div class="dash-stat__value" id="stat-health">0%</div><div class="dash-stat__label">Garden Health</div></div>
+        </div>
+      </div>
+
+      <div class="dash-main">
+        <div class="dash-panel">
+          <div class="dash-panel__header">
+            <h2 class="dash-panel__title">Today's Care Plan</h2>
+            <a href="encyclopedia.html" class="dash-panel__action">Add plants →</a>
+          </div>
+          <div class="dash-list" id="care-list"></div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel__header">
+            <h2 class="dash-panel__title">Your Garden</h2>
+            <a href="encyclopedia.html" class="dash-panel__action">Explore →</a>
+          </div>
+          <div class="dash-list" id="my-plants"></div>
+        </div>
+      </div>
+
+      <div class="dash-main" style="margin-top:var(--space-xl);">
+        <div class="dash-panel">
+          <div class="dash-panel__header">
+            <h2 class="dash-panel__title">Favorite Plants</h2>
+            <a href="encyclopedia.html" class="dash-panel__action">Browse →</a>
+          </div>
+          <div class="dash-mini-grid" id="fav-grid"></div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel__header">
+            <h2 class="dash-panel__title">Quick Tools</h2>
+          </div>
+          <div class="dash-mini-grid">
+            <a href="chatbot.html" class="dash-mini">
+              <div class="dash-mini__icon" aria-hidden="true">🤖</div>
+              <div style="font-weight:600;color:var(--color-primary);">AI Gardener</div>
+              <div class="dash-mini__label">Ask anything</div>
+            </a>
+            <a href="encyclopedia.html" class="dash-mini">
+              <div class="dash-mini__icon" aria-hidden="true">📚</div>
+              <div style="font-weight:600;color:var(--color-primary);">Encyclopedia</div>
+              <div class="dash-mini__label">Browse plants</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 2026 GrowWise. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="encyclopedia.html">Encyclopedia</a>
+          <a href="chatbot.html">AI Chat</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/plants.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

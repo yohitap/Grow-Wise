@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the GrowWise plant encyclopedia — search and filter 500+ vegetables, fruits, herbs, flowers, and home garden plants with complete care guides.">
+  <title>Plant Encyclopedia — GrowWise</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="nav is-scrolled" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon" aria-hidden="true">🌿</span> GrowWise</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="encyclopedia.html" class="nav__link">Encyclopedia</a></li>
+          <li><a href="calendar.html" class="nav__link">Calendar</a></li>
+          <li><a href="identify.html" class="nav__link">Identify</a></li>
+          <li><a href="chatbot.html" class="nav__link">AI Chat</a></li>
+          <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="chatbot.html" class="btn btn--primary">Ask AI</a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+        <a href="index.html" class="nav__mobile-link">Home</a>
+        <a href="encyclopedia.html" class="nav__mobile-link">Encyclopedia</a>
+        <a href="calendar.html" class="nav__mobile-link">Calendar</a>
+        <a href="identify.html" class="nav__mobile-link">Identify</a>
+        <a href="chatbot.html" class="nav__mobile-link">AI Chat</a>
+        <a href="dashboard.html" class="btn btn--secondary" style="margin-top: 1rem;">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero" aria-labelledby="enc-title">
+      <div class="page-hero__shape page-hero__shape--1" aria-hidden="true"></div>
+      <div class="page-hero__shape page-hero__shape--2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="page-hero__label">🌿 Plant Encyclopedia</span>
+          <h1 id="enc-title" class="page-hero__title">Find the Perfect Plant for Your Space</h1>
+          <p class="page-hero__subtitle">
+            Browse vegetables, fruits, herbs, flowers, medicinal and indoor plants. Search by name, or filter by category to discover complete growing guides.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search + filter toolbar -->
+    <section class="section" aria-label="Encyclopedia search">
+      <div class="container">
+        <div class="encyclopedia__toolbar">
+          <div class="encyclopedia__search">
+            <span class="encyclopedia__search-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="plant-search" class="encyclopedia__search-input" placeholder="Search by plant name or scientific name…" autocomplete="off">
+            <button class="encyclopedia__search-clear" id="search-clear" aria-label="Clear search" title="Clear search">✕</button>
+          </div>
+          <div class="encyclopedia__filters" id="filter-chips" role="group" aria-label="Filter by category">
+            <!-- Filter chips injected by JS -->
+          </div>
+        </div>
+
+        <div class="encyclopedia__results">
+          <div class="encyclopedia__meta">
+            <span id="result-count"></span>
+            <span id="active-filter"></span>
+          </div>
+          <div class="plant-grid" id="plant-grid"></div>
+
+          <div class="encyclopedia__empty" id="empty-state">
+            <div class="encyclopedia__empty-icon" aria-hidden="true">🪴</div>
+            <h3>No plants found</h3>
+            <p class="encyclopedia__empty-text">Try a different search term or clear your filters.</p>
+            <button class="btn btn--primary" id="empty-reset">Reset Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo"><span class="nav__logo-icon" aria-hidden="true">🌿</span> GrowWise</div>
+          <p class="footer__desc">Your AI-powered gardening companion. Grow vegetables, herbs, flowers and more — successfully, organically, at home.</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">Platform</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="encyclopedia.html" class="footer__link">Plant Encyclopedia</a></li>
+            <li><a href="chatbot.html" class="footer__link">AI Chatbot</a></li>
+            <li><a href="dashboard.html" class="footer__link">Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Start</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="chatbot.html" class="footer__link">Get Started</a></li>
+            <li><a href="dashboard.html" class="footer__link">Sign In</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">My Garden</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="dashboard.html" class="footer__link">My Plants</a></li>
+            <li><a href="dashboard.html" class="footer__link">Favorites</a></li>
+            <li><a href="dashboard.html" class="footer__link">Reminders</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 GrowWise. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/plants.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/encyclopedia.js"></script>
+</body>
+</html>

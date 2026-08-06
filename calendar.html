@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GrowWise seasonal gardening calendar — know exactly what to sow and grow each month in your terrace, balcony, or indoor garden.">
+  <title>Seasonal Calendar — GrowWise</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav is-scrolled" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon" aria-hidden="true">🌿</span> GrowWise</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="encyclopedia.html" class="nav__link">Encyclopedia</a></li>
+          <li><a href="calendar.html" class="nav__link">Calendar</a></li>
+          <li><a href="chatbot.html" class="nav__link">AI Chat</a></li>
+          <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="chatbot.html" class="btn btn--primary">Ask AI</a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+        <a href="index.html" class="nav__mobile-link">Home</a>
+        <a href="encyclopedia.html" class="nav__mobile-link">Encyclopedia</a>
+        <a href="calendar.html" class="nav__mobile-link">Calendar</a>
+        <a href="chatbot.html" class="nav__mobile-link">AI Chat</a>
+        <a href="dashboard.html" class="btn btn--secondary" style="margin-top: 1rem;">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="cal-title">
+      <div class="page-hero__shape page-hero__shape--1" aria-hidden="true"></div>
+      <div class="page-hero__shape page-hero__shape--2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="page-hero__label">📅 Seasonal Calendar</span>
+          <h1 id="cal-title" class="page-hero__title">What to Plant, Month by Month</h1>
+          <p class="page-hero__subtitle">
+            Climate-smart sowing schedules for Indian terrace and balcony gardens. Pick a month to see what thrives and when.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Seasonal calendar">
+      <div class="container">
+        <div class="calendar__toolbar">
+          <div class="month-switcher" id="month-switcher"></div>
+          <div class="calendar__nav">
+            <button class="calendar__nav-btn" id="prev-month" type="button">← Previous</button>
+            <div style="text-align:center;">
+              <h2 class="calendar__nav-title" id="month-title"></h2>
+              <span class="calendar__season-tag" id="season-tag" style="margin-top:0.5rem;"></span>
+            </div>
+            <button class="calendar__nav-btn" id="next-month" type="button">Next →</button>
+          </div>
+        </div>
+
+        <div class="calendar__spotlight">
+          <header class="section__header" style="text-align:left;margin-inline:0;">
+            <span class="section__label">Sow &amp; Grow</span>
+            <h2 class="section__title" id="plant-section-title"></h2>
+            <p class="section__subtitle">Perfect picks for this month, with full care guides ready when you are.</p>
+          </header>
+          <div class="plant-grid" id="month-plants"></div>
+        </div>
+
+        <aside class="calendar__tip">
+          <div class="calendar__tip-icon" aria-hidden="true">🌦️</div>
+          <div>
+            <div class="calendar__tip-title" id="tip-title"></div>
+            <p class="calendar__tip-text" id="tip-text"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 2026 GrowWise. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="encyclopedia.html">Encyclopedia</a>
+          <a href="chatbot.html">AI Chat</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/plants.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

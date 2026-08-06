@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upload a plant photo to identify it instantly, or check it for diseases — with AI-powered analysis and organic treatment recommendations.">
+  <title>AI Plant Identification — GrowWise</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav is-scrolled" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-icon" aria-hidden="true">🌿</span> GrowWise</a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="encyclopedia.html" class="nav__link">Encyclopedia</a></li>
+          <li><a href="calendar.html" class="nav__link">Calendar</a></li>
+          <li><a href="chatbot.html" class="nav__link">AI Chat</a></li>
+          <li><a href="dashboard.html" class="nav__link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <a href="dashboard.html" class="btn btn--ghost">Dashboard</a>
+          <a href="chatbot.html" class="btn btn--primary">Ask AI</a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+        <a href="index.html" class="nav__mobile-link">Home</a>
+        <a href="encyclopedia.html" class="nav__mobile-link">Encyclopedia</a>
+        <a href="calendar.html" class="nav__mobile-link">Calendar</a>
+        <a href="chatbot.html" class="nav__mobile-link">AI Chat</a>
+        <a href="dashboard.html" class="btn btn--secondary" style="margin-top: 1rem;">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero" aria-labelledby="id-title">
+      <div class="page-hero__shape page-hero__shape--1" aria-hidden="true"></div>
+      <div class="page-hero__shape page-hero__shape--2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero__content">
+          <span class="page-hero__label">📸 AI Vision</span>
+          <h1 id="id-title" class="page-hero__title">Identify Plants &amp; Detect Diseases</h1>
+          <p class="page-hero__subtitle">
+            Snap a photo of any plant or a troubled leaf. Our AI identifies it and recommends organic care or treatments instantly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Plant identification tool">
+      <div class="container">
+        <div class="identify__toolbar">
+          <div class="identify__tabs" role="tablist">
+            <button class="identify__tab is-active" data-mode="identify" type="button" role="tab">🪴 Identify Plant</button>
+            <button class="identify__tab" data-mode="disease" type="button" role="tab">🩺 Disease Check</button>
+          </div>
+        </div>
+
+        <div class="identify__panel">
+          <div class="identify__dropzone" id="dropzone">
+            <div class="identify__dropzone-icon" aria-hidden="true">📷</div>
+            <h2 class="identify__dropzone-title" id="dropzone-title">Upload a plant photo</h2>
+            <p class="identify__dropzone-text" id="dropzone-text">
+              Drag &amp; drop your image here, or click to browse. JPG or PNG, up to 10 MB.
+            </p>
+            <button class="btn btn--primary" type="button">Choose Photo</button>
+            <input type="file" id="image-input" accept="image/*">
+          </div>
+
+          <div class="identify__preview" id="preview">
+            <img id="preview-img" alt="Selected plant preview">
+            <div class="identify__scanline" id="scanline" aria-hidden="true"></div>
+          </div>
+
+          <div class="identify__actions" id="actions">
+            <button class="btn btn--primary btn--lg" id="analyze-btn" type="button">🔍 Analyze Photo</button>
+            <button class="btn btn--secondary btn--lg" id="reset-btn" type="button">↺ New Photo</button>
+          </div>
+
+          <div class="identify__progress" id="progress">
+            <div class="identify__progress-bar"><div class="identify__progress-fill" id="progress-fill"></div></div>
+            <div class="identify__progress-text" id="progress-text">Analyzing…</div>
+          </div>
+
+          <div class="identify__results" id="results"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 2026 GrowWise. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="encyclopedia.html">Encyclopedia</a>
+          <a href="chatbot.html">AI Chat</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/plants.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/identify.js"></script>
+</body>
+</html>
