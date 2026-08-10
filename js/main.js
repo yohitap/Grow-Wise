@@ -1,14 +1,7 @@
-/**
- * GrowWise — Main JavaScript
- * Handles navigation, scroll animations, and interactive UI.
- * Structured for future React/component migration.
- */
+
 
 'use strict';
 
-/* ============================================
-   NAVIGATION MODULE
-   ============================================ */
 const Navigation = {
   nav: null,
   toggle: null,
@@ -21,6 +14,8 @@ const Navigation = {
 
     if (!this.nav) return;
 
+    this.navSolid = this.nav.classList.contains('is-scrolled');
+
     this.handleScroll();
     this.handleMobileToggle();
     this.handleMobileLinks();
@@ -29,7 +24,11 @@ const Navigation = {
 
   handleScroll() {
     const scrolled = window.scrollY > 50;
-    this.nav.classList.toggle('is-scrolled', scrolled);
+    if (scrolled) {
+      this.nav.classList.add('is-scrolled');
+    } else if (!this.navSolid) {
+      this.nav.classList.remove('is-scrolled');
+    }
   },
 
   handleMobileToggle() {
@@ -56,10 +55,6 @@ const Navigation = {
   }
 };
 
-/* ============================================
-   SCROLL ANIMATIONS MODULE
-   Uses Intersection Observer for performance.
-   ============================================ */
 const ScrollAnimations = {
   init() {
     const elements = document.querySelectorAll('.animate-on-scroll');
@@ -84,10 +79,7 @@ const ScrollAnimations = {
   }
 };
 
-/* ============================================
-   COUNTER ANIMATION MODULE
-   Animates stat numbers when they enter viewport.
-   ============================================ */
+
 const CounterAnimation = {
   init() {
     const counters = document.querySelectorAll('[data-count]');
@@ -131,9 +123,7 @@ const CounterAnimation = {
   }
 };
 
-/* ============================================
-   SMOOTH SCROLL MODULE
-   ============================================ */
+
 const SmoothScroll = {
   init() {
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -154,10 +144,6 @@ const SmoothScroll = {
   }
 };
 
-/* ============================================
-   HERO TYPING ANIMATION
-   Simulates AI chatbot typing in hero mockup.
-   ============================================ */
 const HeroTyping = {
   init() {
     const typingEl = document.querySelector('.hero__chat-typing');
@@ -189,12 +175,6 @@ const HeroTyping = {
   }
 };
 
-/* ============================================
-   PAGE TRANSITIONS MODULE
-   Smooth animated movement between pages.
-   Overlay slides up from the bottom on load,
-   and slides across before navigating away.
-   ============================================ */
 const PageTransitions = {
   overlay: null,
   active: false,
@@ -246,12 +226,7 @@ const PageTransitions = {
   }
 };
 
-/* ============================================
-   AUTH UI MODULE
-   Reflects the signed-in state in the navigation.
-   Shows the user's name + a sign-out button when
-   a session exists in localStorage.
-   ============================================ */
+
 const AuthUI = {
   AUTH_KEY: 'growwise.auth',
 
@@ -314,9 +289,6 @@ const AuthUI = {
   }
 };
 
-/* ============================================
-   APP INITIALIZATION
-   ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
   Navigation.init();
   ScrollAnimations.init();

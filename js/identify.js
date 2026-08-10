@@ -1,9 +1,3 @@
-/**
- * GrowWise — AI Vision page logic
- * Plant Identification + Disease Check demo. Uses the shared PlantDB for
- * candidates, and is structured so the analyze step can later be swapped
- * to the Plant.id API / a trained vision model on the server.
- */
 
 'use strict';
 
@@ -321,7 +315,7 @@ const Identify = {
         </div>
 
         <div style="margin-top:var(--space-xl);display:flex;gap:var(--space-md);flex-wrap:wrap;">
-          <a href="chatbot.html" class="btn btn--primary">Ask AI Gardener →</a>
+          <a href="chatbot.html" class="btn btn--primary">Ask Your AI →</a>
           <button class="btn btn--secondary" id="rerun-disease" type="button">↺ Run again</button>
         </div>
       </div>`;

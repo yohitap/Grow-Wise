@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ask the GrowWise AI gardener anything about plant care, watering, fertilizers, pests, and seasonal gardening.">
-  <title>AI Gardener Chat — GrowWise</title>
+  <title>Your AI — GrowWise</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +56,7 @@
         <div class="chat-header__identity">
           <div class="chat-header__avatar" aria-hidden="true">🌿</div>
           <div>
-            <div class="chat-header__title">AI Gardener</div>
+            <div class="chat-header__title">Your AI</div>
             <div class="chat-header__status"><span class="chat-header__status-dot"></span> Online · Expert mode</div>
           </div>
         </div>
@@ -70,9 +70,9 @@
       <div class="chat-body__inner" id="chat-messages">
         <div class="chat-welcome">
           <div class="chat-welcome__icon" aria-hidden="true">🌱</div>
-          <h1 class="chat-welcome__title">How can I help your garden grow?</h1>
+          <h1 class="chat-welcome__title">Hi, I'm Your AI</h1>
           <p class="chat-welcome__text">
-            Ask me about watering, sunlight, fertilizers, pests, seasonal planting, or any plant in our encyclopedia.
+            Ask me about watering, sunlight, fertilizers, pests, pruning, seasonal planting, or any plant in our encyclopedia — I'll guide you step by step.
           </p>
           <div class="chat-suggestions" id="chat-suggestions"></div>
         </div>
@@ -81,13 +81,17 @@
 
     <div class="chat-input">
       <form class="chat-input__inner" id="chat-form">
-        <textarea class="chat-input__field" id="chat-field" rows="1" placeholder="Ask your gardening question…" aria-label="Type your message"></textarea>
+        <textarea class="chat-input__field" id="chat-field" rows="1" maxlength="500" placeholder="Ask your gardening question…" aria-label="Type your message"></textarea>
         <button class="chat-input__send" id="chat-send" type="submit" aria-label="Send message">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/>
           </svg>
         </button>
       </form>
+      <div class="chat-input__hint">
+        <span class="chat-input__counter" id="chat-counter" aria-live="polite">0/500</span>
+        <span class="chat-input__hint-text">Enter to send · Shift+Enter for a new line</span>
+      </div>
     </div>
   </main>
 
