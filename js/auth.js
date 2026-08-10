@@ -1,9 +1,4 @@
-/**
- * GrowWise — Authentication
- * Sign in / sign up with a demo mode that persists to localStorage.
- * When the Express backend is running, requests are sent to the API and
- * the returned JWT is stored instead. Designed to swap cleanly to real auth.
- */
+
 
 'use strict';
 

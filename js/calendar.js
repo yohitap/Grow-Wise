@@ -1,8 +1,3 @@
-/**
- * GrowWise — Seasonal Calendar page logic
- * Maps each month to its growing season and the plants that should
- * be sown/harvested, driven by the shared PlantDB.
- */
 
 'use strict';
 

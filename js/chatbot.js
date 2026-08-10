@@ -1,9 +1,3 @@
-/**
- * GrowWise — Your AI Gardening Chatbot
- * Front-end chat assistant with intelligent, rule-based responses.
- * Uses the shared PlantDB so it can answer questions about encyclopedia plants.
- * Designed to be swapped to the OpenAI API in a future build.
- */
 
 'use strict';
 
