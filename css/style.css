@@ -1,5 +1,4 @@
 :root {
-  /* Brand Colors */
   --color-primary: #123524;
   --color-primary-dark: #0A2418;
   --color-primary-light: #1A4D35;
@@ -7,7 +6,7 @@
   --color-accent: #52B788;
   --color-accent-light: #95D5B2;
 
-  /* Neutrals */
+  
   --color-cream: #F6F1E9;
   --color-cream-dark: #EDE6D9;
   --color-white: #FFFFFF;
@@ -17,16 +16,16 @@
   --color-border: rgba(18, 53, 36, 0.1);
   --color-border-strong: rgba(18, 53, 36, 0.18);
 
-  /* Gradients */
+  
   --gradient-hero: linear-gradient(135deg, #0A2418 0%, #123524 40%, #1A4D35 100%);
   --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(246,241,233,0.6) 100%);
   --gradient-accent: linear-gradient(135deg, #2D6A4F 0%, #52B788 100%);
 
-  /* Typography */
+  
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
-  /* Spacing Scale */
+  
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -36,30 +35,29 @@
   --space-3xl: 4rem;
   --space-4xl: 6rem;
 
-  /* Layout */
+  
   --container-max: 1200px;
   --container-narrow: 900px;
   --nav-height: 72px;
 
-  /* Borders & Radius */
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Shadows */
+  
   --shadow-sm: 0 1px 3px rgba(18, 53, 36, 0.06), 0 1px 2px rgba(18, 53, 36, 0.04);
   --shadow-md: 0 4px 16px rgba(18, 53, 36, 0.08), 0 2px 6px rgba(18, 53, 36, 0.04);
   --shadow-lg: 0 12px 40px rgba(18, 53, 36, 0.12), 0 4px 12px rgba(18, 53, 36, 0.06);
   --shadow-xl: 0 24px 60px rgba(18, 53, 36, 0.16);
 
-  /* Transitions */
+  
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.72);
   --glass-border: rgba(255, 255, 255, 0.4);
   --glass-blur: blur(16px);
