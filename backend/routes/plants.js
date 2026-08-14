@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Plant = require('../models/Plant');
 
-// GET /api/plants — list with optional search + category filter
+
 router.get('/', async (req, res) => {
   try {
     const { q, category } = req.query;
@@ -26,7 +26,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET /api/plants/:id
 router.get('/:id', async (req, res) => {
   try {
     const plant = await Plant.findOne({ id: req.params.id });

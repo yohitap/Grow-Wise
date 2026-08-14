@@ -8,7 +8,7 @@ const router = express.Router();
 const signToken = (user) =>
   jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 
-// POST /api/auth/register
+
 router.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -26,7 +26,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// POST /api/auth/login
+
 router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -40,12 +40,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// GET /api/auth/me — current user (protected)
+
 router.get('/me', auth, (req, res) => {
   res.json({ user: req.user.toPublic() });
 });
 
-// PUT /api/auth/garden — sync user's garden + favorites (protected)
 router.put('/garden', auth, async (req, res) => {
   try {
     const { garden, favorites } = req.body;
