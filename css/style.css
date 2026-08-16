@@ -2950,7 +2950,6 @@ main {
   font-weight: 600;
 }
 
-/* Hero visual / mockup */
 .hero__visual {
   position: relative;
 }
@@ -3241,7 +3240,7 @@ main {
   color: rgba(246, 241, 233, 0.65);
 }
 
-/* Category color variants */
+
 .category-card--vegetables .category-card__bg { background: linear-gradient(135deg, #1A4D35, #2D6A4F); }
 .category-card--fruits .category-card__bg { background: linear-gradient(135deg, #8B4513, #CD853F); }
 .category-card--herbs .category-card__bg { background: linear-gradient(135deg, #2D6A4F, #52B788); }

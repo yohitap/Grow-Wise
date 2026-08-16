@@ -1,10 +1,3 @@
-/**
- * GrowWise — Seed script
- * Populates MongoDB with the plant database from the shared front-end source
- * (js/plants.js), keeping a single source of truth.
- *
- * Usage: npm run seed
- */
 
 require('dotenv').config();
 
