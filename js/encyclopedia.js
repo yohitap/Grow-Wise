@@ -1,8 +1,3 @@
-/**
- * GrowWise — Encyclopedia page logic
- * Handles searching, category filtering, and rendering of plant cards.
- */
-
 'use strict';
 
 const Encyclopedia = {

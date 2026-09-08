@@ -1,8 +1,3 @@
-/**
- * GrowWise — Homemade Fertilizer Library
- * Organic, kitchen-scrap and DIY fertilizer recipes with method + usage.
- * Shared source of truth; structured for a future DB-backed version.
- */
 
 'use strict';
 

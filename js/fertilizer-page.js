@@ -1,7 +1,3 @@
-/**
- * GrowWise — Fertilizer Library page logic
- * Search + category filtering over the FERTILIZERS data.
- */
 
 'use strict';
 

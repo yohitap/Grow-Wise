@@ -1,9 +1,3 @@
-/**
- * GrowWise — Dashboard page logic
- * Personalized garden dashboard: stats, today's care plan, favorites,
- * and my-plant tracking. Persists user garden + favorites in localStorage.
- */
-
 'use strict';
 
 const Dashboard = {
