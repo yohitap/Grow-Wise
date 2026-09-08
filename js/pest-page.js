@@ -1,8 +1,3 @@
-/**
- * GrowWise — Pest & Disease Management page logic
- * Search + type filtering over the PESTS data.
- */
-
 'use strict';
 
 const PestPage = {
