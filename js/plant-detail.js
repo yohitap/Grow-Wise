@@ -1,9 +1,3 @@
-/**
- * GrowWise — Plant Detail page logic
- * Renders a full care guide for the plant selected via ?id= query param.
- * Uses localStorage for favorites.
- */
-
 'use strict';
 
 const PlantDetail = {
