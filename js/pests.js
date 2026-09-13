@@ -1,8 +1,3 @@
-/**
- * GrowWise — Organic Pest & Disease Management
- * Organic, chemical-free treatments for common garden pests and diseases.
- */
-
 'use strict';
 
 const PESTS = [
