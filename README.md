@@ -82,9 +82,5 @@ Open `index.html` in a browser or use a local development server to explore the 
 
 > **Note:** Database credentials and API keys should be stored in environment variables, never committed to GitHub. Follow the actual configuration and scripts in the repository when setting up the application.
 
-## 🌍 Vision
-
-GrowWise aims to make gardening less intimidating and more rewarding by helping people turn limited spaces into thriving green environments. Its long-term vision is to combine accessible plant knowledge, personalized care, AI-assisted problem solving, and sustainable practices into a dependable digital companion for home gardeners.
-
 **GrowWise — Every space can grow something. 🌱**
 
