@@ -36,18 +36,6 @@ GrowWise focuses on **practical, beginner-friendly, and sustainable gardening**,
 - **Sustainability by design:** Encourages organic gardening methods, responsible use of household resources, and waste-to-compost practices.
 - **AI-assisted problem solving:** Aims to make gardening advice more accessible by helping users understand plant problems and explore relevant solutions.
 
-## 🎯 Real-World Problems Solved
-
-| Problem | How GrowWise Helps |
-|---|---|
-| Beginners don't know which plants to grow | Provides plant information and growing recommendations |
-| Incorrect watering and sunlight exposure damage plants | Offers plant-specific care guidance |
-| Plant diseases and pests are difficult to identify | Provides resources and AI-assisted image analysis |
-| Gardening information is scattered across platforms | Brings essential gardening resources into one place |
-| Chemical treatments may be the first solution people consider | Promotes learning about organic alternatives and preventive care |
-| Small living spaces limit gardening confidence | Supports indoor, balcony, and terrace gardening |
-| Garden maintenance is easy to forget | Helps users organize plants, tasks, and reminders |
-
 ## 🪴 How to Use GrowWise
 
 1. **Explore plants:** Open the Plant Encyclopedia, search for a plant, and filter by category.
@@ -100,13 +88,3 @@ GrowWise aims to make gardening less intimidating and more rewarding by helping 
 
 **GrowWise — Every space can grow something. 🌱**
 
-## 👩‍💻 Author
-
-**Yohita**  
-Computer Science Engineering | Cybersecurity | AI
-
-GitHub: [@yohitap](https://github.com/yohitap)
-
----
-
-*Built to make home gardening smarter, more accessible, and more sustainable.*
